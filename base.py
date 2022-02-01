@@ -17,8 +17,29 @@ fullData = [
   series
 ]
 
-for frame in fullData:
+def getAllColumns():
+  for frame in fullData:
+    print('----------------')
+    for col in frame.columns:
+      print(col)
   print('----------------')
-  for col in frame.columns:
-    print(col)
-print('----------------')
+  
+def getTopics():
+  column_values = series[["Topic"]].values.ravel()
+  unique_values =  pd.unique(column_values)
+  print(unique_values)
+
+def getIndicators(topics):
+  healthStats = series.loc[series['Topic'].isin(topics)]
+  column_values = healthStats[["Indicator Name"]].values.ravel()
+  unique_values =  pd.unique(column_values)
+  print(unique_values)
+
+#getTopics()
+
+healthIndicatorTopics = ['Non-communicable diseases', 'Nutrition', 'HIV/AIDS', 'Reproductive health', 'Water and sanitation', 'Immunization', 'Medical resources and usage' 'Infectious diseases' 'Health financing', 'Background: Poverty']
+
+getIndicators(healthIndicatorTopics)
+
+
+

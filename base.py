@@ -7,6 +7,8 @@ data = pd.read_csv('./data/HNP_StatsData.csv')
 footNote = pd.read_csv('./data/HNP_StatsFootNote.csv')
 seriesTime = pd.read_csv('./data/HNP_StatsSeries-Time.csv')
 series = pd.read_csv('./data/HNP_StatsSeries.csv')
+catastrophes = pd.read_csv('./data/emdat_public_2022_01_31.csv')
+electoralViolence = pd.read_csv('./data/ucdp-prio-acd-211.csv')
 
 fullData = [
   countries,
@@ -14,7 +16,8 @@ fullData = [
   data,
   footNote,
   seriesTime,
-  series
+  series,
+  catastrophes
 ]
 
 def getAllColumns():
@@ -35,11 +38,15 @@ def getIndicators(topics):
   unique_values =  pd.unique(column_values)
   print(unique_values)
 
+
+
 #getTopics()
 
 healthIndicatorTopics = ['Non-communicable diseases', 'Nutrition', 'HIV/AIDS', 'Reproductive health', 'Water and sanitation', 'Immunization', 'Medical resources and usage' 'Infectious diseases' 'Health financing', 'Background: Poverty']
 
-getIndicators(healthIndicatorTopics)
+#getIndicators(healthIndicatorTopics)
 
+for col in electoralViolence.columns:
+   print(col)
 
 

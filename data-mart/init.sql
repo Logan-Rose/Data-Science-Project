@@ -39,3 +39,33 @@ CREATE TABLE Health(
   hiv_prevalence_male DECIMAL,
   hiv_prevalence_female DECIMAL
 );
+CREATE TABLE Quality_of_Life(
+  Quality_of_life_key TEXT PRIMARY KEY NOT NULL,
+  Access_to_Drinking_Water DECIMAL,
+  Access_to_Sanitation DECIMAL,
+  Access_to_Basic_Handwashing_Facilities DECIMAL,
+  Male_Unemployment_Rate DECIMAL,
+  Female_Unemployment_Rate DECIMAL,
+  Total_Unemployment_Rate DECIMAL,
+);
+CREATE TABLE Population(
+  Quality_of_life_key TEXT PRIMARY KEY NOT NULL,
+  Male_Life_Expectancy DECIMAL,
+  Female_Life_Expectancy DECIMAL,
+  Total_Life_Expectancy DECIMAL,
+  Net_Migration DECIMAL,
+  Rrural_population_percentage DECIMAL,
+  Urban_population_percentage DECIMAL,
+  population_growth DECIMAL,
+  poverty_rate DECIMAL,
+);
+CREATE TABLE Event(
+  event_key TEXT PRIMARY KEY NOT NULL,
+  event_name TEXT,
+  event_description TEXT,
+  start_date DATE,
+  end_date DATE,
+  start_month INT,
+  end_month INT,
+  outcome DECIMAL
+);

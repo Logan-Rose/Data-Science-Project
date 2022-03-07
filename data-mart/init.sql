@@ -1,12 +1,19 @@
 CREATE TABLE Country(
   country_key TEXT PRIMARY KEY NOT NULL,
-  country_name TEXT,
+  long_name TEXT,
+  short_name TEXT,
+  alpha_code TEXT,
   region TEXT,
   continent TEXT,
+  population INT,
   currency TEXT,
   capital TEXT,
   total_population INT,
-  birthrate DECIMAL
+  birth_rate DECIMAL,
+  sex_ratio_at_birth DECIMAL,
+  income_group TEXT,
+  GNI_capita DECIMAL,
+  last_census DATE
 );
 CREATE TABLE Month(
   month_key TEXT PRIMARY KEY NOT NULL,
@@ -17,12 +24,21 @@ CREATE TABLE Month(
 );
 CREATE TABLE Education(
   education_key TEXT PRIMARY KEY NOT NULL,
+  adult_literacy_rate DECIMAL,
   male_literacy_rate DECIMAL,
   female_literacy_rate DECIMAL,
-  total_literacy_rate DECIMAL,
   primary_school_enrolment DECIMAL,
   secondary_school_enrolment DECIMAL,
-  public_education_spending DECIMAL -- 12 more attributes at least
+  public_education_spending DECIMAL,
+  primary_school_enrollment DECIMAL,
+  primary_school_enrollment_female DECIMAL,
+  primary_school_enrollment_male DECIMAL,
+  secondary_school_enrollment DECIMAL,
+  secondary_school_enrollment_female DECIMAL,
+  secondary_school_enrollment_male DECIMAL,
+  primary_completion_rate_female DECIMAL,
+  primary_completion_rate_male DECIMAL,
+  primary_completion_rate_total DECIMAL
 );
 CREATE TABLE Health(
   health_key TEXT PRIMARY KEY NOT NULL,
@@ -37,27 +53,53 @@ CREATE TABLE Health(
   number_of_doctors INT,
   number_of_nurses INT,
   hiv_prevalence_male DECIMAL,
-  hiv_prevalence_female DECIMAL
+  hiv_prevalence_female DECIMAL,
+  hiv_prevalence_children DECIMAL,
+  adults_newly_infected_HIV INT,
+  children_newly_infected_HIV INT,
+  percent_adults_overweight DECIMAL,
+  percent_children_overweight DECIMAL,
+  communicable_disease_deaths INT,
+  non_communicable_disease_deaths INT,
+  domestic_health_expenditure DECIMAL,
+  UHC_service_coverage_index INT,
+  surgical_procedures INT,
+  diabetes_prevalence DECIMAL
 );
 CREATE TABLE Quality_of_Life(
   Quality_of_life_key TEXT PRIMARY KEY NOT NULL,
-  Access_to_Drinking_Water DECIMAL,
-  Access_to_Sanitation DECIMAL,
-  Access_to_Basic_Handwashing_Facilities DECIMAL,
+  access_to_basic_sanitation DECIMAL,
+  access_to_managed_sanitation DECIMAL,
+  access_basic_drinking_water DECIMAL,
+  access_safely_managed_drinking_water DECIMAL,
+  access_to_Basic_Handwashing_Facilities DECIMAL,
+  basic_handwashing_facilities DECIMAL,
+  mortality_rate_unsafe_water DECIMAL,
   Male_Unemployment_Rate DECIMAL,
   Female_Unemployment_Rate DECIMAL,
   Total_Unemployment_Rate DECIMAL,
+  maternal_leave_benifits DECIMAL,
+  practicing_open_defecation DECIMAL,
+  air_polutant_exposure DECIMAL,
+  mortality_rate_air_quality DECIMAL,
+  CO2_emissions DECIMAL
 );
 CREATE TABLE Population(
-  Quality_of_life_key TEXT PRIMARY KEY NOT NULL,
+  population_key TEXT PRIMARY KEY NOT NULL,
   Male_Life_Expectancy DECIMAL,
   Female_Life_Expectancy DECIMAL,
   Total_Life_Expectancy DECIMAL,
   Net_Migration DECIMAL,
-  Rrural_population_percentage DECIMAL,
+  Rural_population_percentage DECIMAL,
+  Rural_population_growth DECIMAL,
+  Rural_poverty DECIMAL,
   Urban_population_percentage DECIMAL,
+  Urban_population_growth DECIMAL,
+  Urban_poverty DECIMAL,
   population_growth DECIMAL,
   poverty_rate DECIMAL,
+  male_population DECIMAL,
+  female_population DECIMAL
 );
 CREATE TABLE Event(
   event_key TEXT PRIMARY KEY NOT NULL,
@@ -67,5 +109,8 @@ CREATE TABLE Event(
   end_date DATE,
   start_month INT,
   end_month INT,
-  outcome DECIMAL
+  outcome DECIMAL,
+  event_type TEXT,
+  total_affected INT,
+  total_deaths INT
 );

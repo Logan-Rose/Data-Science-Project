@@ -101,16 +101,19 @@ CREATE TABLE Population(
   male_population DECIMAL,
   female_population DECIMAL
 );
-CREATE TABLE Event(
-  event_key TEXT PRIMARY KEY NOT NULL,
-  event_name TEXT,
-  event_description TEXT,
-  start_date DATE,
-  end_date DATE,
+CREATE TABLE Disaster(
+  disaster_key TEXT PRIMARY KEY NOT NULL,
+  country TEXT,
+  start_year INT,
   start_month INT,
+  start_day INT,
+  end_year INT,
   end_month INT,
-  outcome DECIMAL,
-  event_type TEXT,
+  end_day INT,
+  disaster_group TEXT,
+  disaster_subgroup TEXT,
+  disaster_type TEXT,
+  disaster_subtype TEXT,
   total_affected INT,
-  total_deaths INT
+  total_disaster_deaths INT
 );

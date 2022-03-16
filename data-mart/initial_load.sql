@@ -15,4 +15,4 @@ COPY Disaster(
   total_disaster_deaths
 )
 FROM
-  '../seeds/Disasters_seed.csv' DELIMITER ',' CSV HEADER
+  '../seeds/Disasters_seed.csv' DELIMITER ',' CSV HEADER;

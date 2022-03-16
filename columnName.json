@@ -1,0 +1,18 @@
+{"Country Name":"",
+  "Country Code":"",
+  "Year":"",
+  "key":"key",
+  "Literacy rate, adult female (% of females ages 15 and above)":"female_literacy_rate",
+  "Literacy rate, adult male (% of males ages 15 and above)":"male_literacy_rate",
+  "Literacy rate, adult total (% of people ages 15 and above)":"adult_literacy_rate",
+  "Primary completion rate, female (% of relevant age group)":"primary_completion_rate_total",
+  "Primary completion rate, male (% of relevant age group)":"primary_completion_rate_male",
+  "Primary completion rate, total (% of relevant age group)":"primary_completion_rate_female",
+  "Public spending on education, total (% of GDP)":"public_education_spending",
+  "School enrollment, primary (% gross)":"primary_school_enrollment",
+  "School enrollment, primary, female (% gross)":"primary_school_enrollment_female",
+  "School enrollment, primary, male (% gross)":"primary_school_enrollment_male",
+  "School enrollment, secondary (% gross)":"secondary_school_enrollment",
+  "School enrollment, secondary, female (% gross)":"secondary_school_enrollment_female",
+  "School enrollment, secondary, male (% gross)":"secondary_school_enrollment_male"
+}

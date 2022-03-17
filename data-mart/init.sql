@@ -1,29 +1,35 @@
 CREATE TABLE Country(
-  country_key TEXT PRIMARY KEY NOT NULL,
+  key TEXT PRIMARY KEY NOT NULL,
   long_name TEXT,
   short_name TEXT,
   alpha_code TEXT,
   region TEXT,
   continent TEXT,
-  population INT,
   currency TEXT,
   capital TEXT,
-  total_population INT,
-  birth_rate DECIMAL,
-  sex_ratio_at_birth DECIMAL,
   income_group TEXT,
-  GNI_capita DECIMAL,
-  last_census DATE
+  last_census_year INT,
+  land_area INT,
+  number_languages INT
 );
-CREATE TABLE Month(
-  month_key TEXT PRIMARY KEY NOT NULL,
-  month_name TEXT,
-  quarter INT,
-  year INT,
-  decade INT
+CREATE TABLE Disaster(
+  key TEXT PRIMARY KEY NOT NULL,
+  --country TEXT,
+  start_year INT,
+  start_month INT,
+  start_day INT,
+  end_year INT,
+  end_month INT,
+  end_day INT,
+  disaster_group TEXT,
+  disaster_subgroup TEXT,
+  disaster_type TEXT,
+  disaster_subtype TEXT,
+  total_affected INT,
+  total_disaster_deaths INT
 );
 CREATE TABLE Education(
-  education_key TEXT PRIMARY KEY NOT NULL,
+  key TEXT PRIMARY KEY NOT NULL,
   adult_literacy_rate DECIMAL,
   male_literacy_rate DECIMAL,
   female_literacy_rate DECIMAL,
@@ -39,51 +45,49 @@ CREATE TABLE Education(
   primary_completion_rate_total DECIMAL
 );
 CREATE TABLE Health(
-  health_key TEXT PRIMARY KEY NOT NULL,
+  key TEXT PRIMARY KEY NOT NULL,
   health_expenditure DECIMAL,
-  Hospital_beds INT,
-  Hepatitis_immunization_rate DECIMAL,
-  dpt_immunization_rate DECIMAL,
-  measles_immunization_rate DECIMAL,
-  polio_immunization_rate DECIMAL,
-  stillbirths INT,
-  infant_mortality DECIMAL,
-  number_of_doctors INT,
-  number_of_nurses INT,
-  hiv_prevalence_male DECIMAL,
-  hiv_prevalence_female DECIMAL,
+  Hospital_beds_per_thousand DECIMAL,
+  -- Hepatitis_immunization_rate DECIMAL,
+  -- dpt_immunization_rate DECIMAL,
+  -- measles_immunization_rate DECIMAL,
+  -- polio_immunization_rate DECIMAL,
+  -- stillbirths INT,
+  -- infant_mortality DECIMAL,
+  -- number_of_doctors INT,
+  number_of_nurses_midwives_per_thousand DECIMAL,
+  --hiv_prevalence_male DECIMAL,
+  --hiv_prevalence_female DECIMAL,
+  hiv_prevalence DECIMAL,
   hiv_prevalence_children DECIMAL,
   adults_newly_infected_HIV INT,
   children_newly_infected_HIV INT,
   percent_adults_overweight DECIMAL,
   percent_children_overweight DECIMAL,
-  communicable_disease_deaths INT,
-  non_communicable_disease_deaths INT,
-  domestic_health_expenditure DECIMAL,
+  communicable_disease_deaths_percent DECIMAL,
+  non_communicable_disease_deaths_percent DECIMAL,
   UHC_service_coverage_index INT,
-  surgical_procedures INT,
+  surgical_procedures_per_hundred_thousand DECIMAL,
   diabetes_prevalence DECIMAL
 );
 CREATE TABLE Quality_of_Life(
-  Quality_of_life_key TEXT PRIMARY KEY NOT NULL,
+  key TEXT PRIMARY KEY NOT NULL,
   access_to_basic_sanitation DECIMAL,
   access_to_managed_sanitation DECIMAL,
   access_basic_drinking_water DECIMAL,
   access_safely_managed_drinking_water DECIMAL,
   access_to_Basic_Handwashing_Facilities DECIMAL,
-  basic_handwashing_facilities DECIMAL,
   mortality_rate_unsafe_water DECIMAL,
+  mortality_rate_air_quality DECIMAL,
   Male_Unemployment_Rate DECIMAL,
   Female_Unemployment_Rate DECIMAL,
   Total_Unemployment_Rate DECIMAL,
   maternal_leave_benifits DECIMAL,
   practicing_open_defecation DECIMAL,
-  air_polutant_exposure DECIMAL,
-  mortality_rate_air_quality DECIMAL,
-  CO2_emissions DECIMAL
+  labor_force_participation DECIMAL
 );
 CREATE TABLE Population(
-  population_key TEXT PRIMARY KEY NOT NULL,
+  key TEXT PRIMARY KEY NOT NULL,
   Male_Life_Expectancy DECIMAL,
   Female_Life_Expectancy DECIMAL,
   Total_Life_Expectancy DECIMAL,
@@ -97,21 +101,13 @@ CREATE TABLE Population(
   population_growth DECIMAL,
   poverty_rate DECIMAL,
   male_population DECIMAL,
-  female_population DECIMAL
+  female_population DECIMAL,
+  total_population INT
 );
-CREATE TABLE Disaster(
-  disaster_key TEXT PRIMARY KEY NOT NULL,
-  country TEXT,
-  start_year INT,
-  start_month INT,
-  start_day INT,
-  end_year INT,
-  end_month INT,
-  end_day INT,
-  disaster_group TEXT,
-  disaster_subgroup TEXT,
-  disaster_type TEXT,
-  disaster_subtype TEXT,
-  total_affected INT,
-  total_disaster_deaths INT
+CREATE TABLE Month(
+  key TEXT PRIMARY KEY NOT NULL,
+  month_name TEXT,
+  quarter INT,
+  year INT,
+  decade INT
 );

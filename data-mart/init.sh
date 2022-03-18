@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-
 # Move the Seed Files from the seed_data directory to the /seeds directory in the docker container
-
 docker exec -t -i some-postgres /bin/bash -c "mkdir seeds"
 cd seed_data
 load_file () {
@@ -17,8 +15,8 @@ do
 done
 
 # Mode the SQL Files to the /scripts directory in the docker container
-docker cp ./data-mart/init.sql some-postgres:./scripts/
-docker cp ./data-mart/initial_load.sql some-postgres:./scripts/
+docker cp ../data-mart/init.sql some-postgres:./seeds/
+docker cp ../data-mart/initial_load.sql some-postgres:./seeds/
 
-docker exec -ti some-postgres psql -U postgres -c "\i ./scripts/init.sql"
-docker exec -ti some-postgres psql -U postgres -c "\i ./scripts/initial_load.sql"
+docker exec -ti some-postgres psql -U postgres -c "\i ./seeds/init.sql"
+docker exec -ti some-postgres psql -U postgres -c "\i /root/seeds/initial_load.sql"

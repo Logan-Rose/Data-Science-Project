@@ -1,6 +1,6 @@
-COPY Disaster(
-  disaster_key,
-  country,
+COPY Event(
+  key,
+  --country,
   start_year,
   start_month,
   start_day,
@@ -15,4 +15,4 @@ COPY Disaster(
   total_disaster_deaths
 )
 FROM
-  '../seeds/Disasters_seed.csv' DELIMITER ',' CSV HEADER;
+  './seeds/Events_seed.csv' DELIMITER ',' CSV HEADER;

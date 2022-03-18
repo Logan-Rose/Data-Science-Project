@@ -12,7 +12,7 @@ CREATE TABLE Country(
   land_area INT,
   number_languages INT
 );
-CREATE TABLE Disaster(
+CREATE TABLE Event(
   key TEXT PRIMARY KEY NOT NULL,
   --country TEXT,
   start_year INT,

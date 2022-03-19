@@ -1,6 +1,5 @@
 {
   "Country Name":"country_name",
-  
   "Long Name":"long_name",
   "Short Name":"short_name",
   "Country Code":"alpha_code",
@@ -84,9 +83,6 @@
   "Population, total":"total_population",
   "Suicide mortality rate (per 100,000 population)":"suicide_mortalty_rate",
 
-
-
-
   "Dis No":"seed_id",
   "Country":"country",
   "Start Year":"start_year",
@@ -108,5 +104,4 @@
   "attacktype1_txt": "event_type",
   "nkill": "total_deaths",
   "nwound": "total_affected"
-  
 }

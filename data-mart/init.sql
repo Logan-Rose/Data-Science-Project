@@ -14,19 +14,17 @@ CREATE TABLE Country(
 );
 CREATE TABLE Event(
   key INT PRIMARY KEY NOT NULL,
-  --country TEXT,
-  start_year INT,
-  start_month INT,
-  start_day INT,
-  end_year INT,
-  end_month INT,
-  end_day INT,
-  disaster_group TEXT,
-  disaster_subgroup TEXT,
-  disaster_type TEXT,
-  disaster_subtype TEXT,
-  total_affected INT,
-  total_disaster_deaths INT
+  seed_id TEXT,
+  country TEXT,
+  start_year DECIMAL,
+  start_month DECIMAL,
+  start_day DECIMAL,
+  end_year DECIMAL,
+  end_month DECIMAL,
+  end_day DECIMAL,
+  event_type TEXT,
+  total_affected DECIMAL,
+  total_deaths DECIMAL
 );
 CREATE TABLE Education(
   key INT PRIMARY KEY NOT NULL,
@@ -61,6 +59,7 @@ CREATE TABLE Health(
 );
 CREATE TABLE Quality_of_Life(
   key INT PRIMARY KEY NOT NULL,
+  percent_births_attended_skilled_staff DECIMAL,
   labor_force_participation DECIMAL,
   labor_force_total DECIMAL,
   maternal_leave_benifits DECIMAL,
@@ -77,18 +76,18 @@ CREATE TABLE Quality_of_Life(
 );
 CREATE TABLE Population(
   key INT PRIMARY KEY NOT NULL,
-  male_Life_Expectancy DECIMAL,
-  --  Female_Life_Expectancy DECIMAL,
-  total_Life_Expectancy DECIMAL,
+  female_life_expectancy DECIMAL,
+  male_life_expectancy DECIMAL,
+  total_life_expectancy DECIMAL,
   net_Migration DECIMAL,
+  population_growth DECIMAL,
   female_population DECIMAL,
   male_population DECIMAL,
   total_population DECIMAL,
   rural_population_percentage DECIMAL,
   rural_population_growth DECIMAL,
   urban_population_percentage DECIMAL,
-  urban_population_growth DECIMAL --population_growth DECIMAL,
-  --poverty_rate DECIMAL,
+  urban_population_growth DECIMAL
 );
 CREATE TABLE Month(
   key INT PRIMARY KEY NOT NULL,
@@ -105,5 +104,8 @@ CREATE TABLE FACT(
   education_key INT,
   health_key INT,
   quality_of_life_key INT,
-  event_key INT
+  event_key INT,
+  avg_births DECIMAL,
+  avg_deaths DECIMAL,
+  HDI DECIMAL
 )

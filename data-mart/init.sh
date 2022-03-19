@@ -18,7 +18,6 @@ done
 
 # Mode the SQL Files to the /scripts directory in the docker container
 docker cp ../data-mart/init.sql $db:./seeds/
-docker cp ../data-mart/initial_load.sql $db:./seeds/
 
 #Create Tables
 docker exec -ti $db psql -U postgres -c "\i ./seeds/init.sql"
@@ -29,4 +28,5 @@ docker exec -ti $db psql -U postgres -c "\copy Education FROM ./seeds/Education_
 docker exec -ti $db psql -U postgres -c "\copy Health FROM ./seeds/Health_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Quality_of_Life FROM ./seeds/Quality_of_life_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Population FROM ./seeds/Population_seed.csv delimiter ',' CSV HEADER"
+docker exec -ti $db psql -U postgres -c "\copy Event FROM ./seeds/Events_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Fact FROM ./seeds/Facts.csv delimiter ',' CSV HEADER"

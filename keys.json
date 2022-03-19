@@ -13,20 +13,6 @@
   "area":"land_area",
   "num_language":"number_languages",
 
-  "Dis No": "key",
-  "Start Year":"start_year",
-  "Start Month":"start_month",
-  "Start Day":"start_day",
-  "End Year":"end_year",
-  "End Month":"end_month",
-  "End Day":"end_day",
-  "Disaster Group":"disaster_group",
-  "Disaster Subgroup":"disaster_subgroup",
-  "Disaster Type":"disaster_type",
-  "Disaster Subtype" :"disaster_subtype",
-  "Total Affected":"total_affected",
-  "Total Deaths" :"total_disaster_deaths",
-
   "Literacy rate, adult total (% of people ages 15 and above)":"adult_literacy_rate",
   "Literacy rate, adult male (% of males ages 15 and above)":"male_literacy_rate",
   "Literacy rate, adult female (% of females ages 15 and above)":"female_literacy_rate",
@@ -75,10 +61,10 @@
   "People practicing open defecation (% of population)":"practicing_open_defecation",
   "Labor force, female (% of total labor force)":"labor_force_participation",
   "Labor force, total":"labor_force_total",
-
-  "Life expectancy at birth, male (years)":"male_Life_Expectancy",
-  "Female_Life_Expectancy":"NEEDED",
-  "Life expectancy at birth, total (years)":"total_Life_Expectancy",
+  "Births attended by skilled health staff (% of total)":"percent_births_attended_skilled_staff",
+  "Life expectancy at birth, male (years)":"male_life_expectancy",
+  "Life expectancy at birth, female (years)":"female_life_expectancy",
+  "Life expectancy at birth, total (years)":"total_life_expectancy",
   "Net migration":"net_Migration",
   "Rural population":"rural_population_percentage",
   "Rural population growth (annual %)":"rural_population_growth",
@@ -86,10 +72,36 @@
   "Urban population":"urban_population_percentage",
   "Urban population growth (annual %)":"urban_population_growth",
   "Urban_poverty":"NEEDED",
-  "population_growth":"NEEDED",
+  "Population growth (annual %)":"population_growth",
   "Poverty headcount ratio at national poverty line (% of population)":"poverty_rate",
   "Population, female (% of total population)":"female_population",
   "Population, male (% of total population)":"male_population",
-  "Population, total":"total_population"
+  "Population, total":"total_population",
+
+
+
+
+
+  "Dis No":"seed_id",
+  "Country":"country",
+  "Start Year":"start_year",
+  "Start Month":"end_month",
+  "Start Day":"end_day",
+  "End Year":"end_year",
+  "End Month":"end_month",
+  "End Day":"end_day",
+  "Event Type":"event_type",
+  "Disaster Type":"event_type",
+  "Total Affected":"total_affected",
+  "Total Deaths":"total_deaths",
+
+  "eventid": "seed_id",
+  "iyear": "start_year",
+  "imonth": "start_month", 
+  "iday": "start_day",
+  "country_txt": "country",
+  "attacktype1_txt": "event_type",
+  "nkill": "total_deaths",
+  "nwound": "total_affected"
   
 }

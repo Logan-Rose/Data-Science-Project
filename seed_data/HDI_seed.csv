@@ -1,0 +1,280 @@
+HDI Rank,Country,Year,Value
+16, Canada,1990,0.850
+16, Canada,1991,0.854
+16, Canada,1992,0.857
+16, Canada,1993,0.855
+16, Canada,1994,0.859
+16, Canada,1995,0.862
+16, Canada,1996,0.864
+16, Canada,1997,0.863
+16, Canada,1998,0.861
+16, Canada,1999,0.864
+16, Canada,2000,0.867
+16, Canada,2001,0.871
+16, Canada,2002,0.877
+16, Canada,2003,0.882
+16, Canada,2004,0.888
+16, Canada,2005,0.894
+16, Canada,2006,0.898
+16, Canada,2007,0.896
+16, Canada,2008,0.898
+16, Canada,2009,0.898
+16, Canada,2010,0.901
+16, Canada,2011,0.903
+16, Canada,2012,0.906
+16, Canada,2013,0.913
+16, Canada,2014,0.918
+16, Canada,2015,0.921
+16, Canada,2016,0.923
+16, Canada,2017,0.926
+16, Canada,2018,0.928
+16, Canada,2019,0.929
+16, Canada,2020,0.929
+17, United States,1990,0.865
+17, United States,1991,0.867
+17, United States,1992,0.872
+17, United States,1993,0.877
+17, United States,1994,0.880
+17, United States,1995,0.883
+17, United States,1996,0.884
+17, United States,1997,0.886
+17, United States,1998,0.889
+17, United States,1999,0.890
+17, United States,2000,0.886
+17, United States,2001,0.889
+17, United States,2002,0.891
+17, United States,2003,0.894
+17, United States,2004,0.897
+17, United States,2005,0.900
+17, United States,2006,0.903
+17, United States,2007,0.906
+17, United States,2008,0.911
+17, United States,2009,0.912
+17, United States,2010,0.916
+17, United States,2011,0.919
+17, United States,2012,0.920
+17, United States,2013,0.918
+17, United States,2014,0.920
+17, United States,2015,0.921
+17, United States,2016,0.922
+17, United States,2017,0.924
+17, United States,2018,0.925
+17, United States,2019,0.926
+17, United States,2020,0.926
+74, Mexico,1990,0.656
+74, Mexico,1991,0.660
+74, Mexico,1992,0.664
+74, Mexico,1993,0.668
+74, Mexico,1994,0.675
+74, Mexico,1995,0.677
+74, Mexico,1996,0.683
+74, Mexico,1997,0.689
+74, Mexico,1998,0.695
+74, Mexico,1999,0.699
+74, Mexico,2000,0.708
+74, Mexico,2001,0.712
+74, Mexico,2002,0.718
+74, Mexico,2003,0.722
+74, Mexico,2004,0.731
+74, Mexico,2005,0.737
+74, Mexico,2006,0.745
+74, Mexico,2007,0.746
+74, Mexico,2008,0.748
+74, Mexico,2009,0.748
+74, Mexico,2010,0.748
+74, Mexico,2011,0.755
+74, Mexico,2012,0.759
+74, Mexico,2013,0.756
+74, Mexico,2014,0.761
+74, Mexico,2015,0.766
+74, Mexico,2016,0.768
+74, Mexico,2017,0.771
+74, Mexico,2018,0.776
+74, Mexico,2019,0.779
+74, Mexico,2020,0.779
+131, India,1990,0.429
+131, India,1991,0.433
+131, India,1992,0.440
+131, India,1993,0.446
+131, India,1994,0.453
+131, India,1995,0.461
+131, India,1996,0.468
+131, India,1997,0.474
+131, India,1998,0.481
+131, India,1999,0.489
+131, India,2000,0.495
+131, India,2001,0.499
+131, India,2002,0.506
+131, India,2003,0.518
+131, India,2004,0.527
+131, India,2005,0.536
+131, India,2006,0.546
+131, India,2007,0.555
+131, India,2008,0.563
+131, India,2009,0.569
+131, India,2010,0.579
+131, India,2011,0.588
+131, India,2012,0.597
+131, India,2013,0.604
+131, India,2014,0.616
+131, India,2015,0.624
+131, India,2016,0.630
+131, India,2017,0.640
+131, India,2018,0.642
+131, India,2019,0.645
+131, India,2020,0.645
+85, China,1990,0.499
+85, China,1991,0.507
+85, China,1992,0.517
+85, China,1993,0.527
+85, China,1994,0.534
+85, China,1995,0.545
+85, China,1996,0.554
+85, China,1997,0.563
+85, China,1998,0.571
+85, China,1999,0.579
+85, China,2000,0.588
+85, China,2001,0.596
+85, China,2002,0.606
+85, China,2003,0.618
+85, China,2004,0.628
+85, China,2005,0.640
+85, China,2006,0.653
+85, China,2007,0.667
+85, China,2008,0.678
+85, China,2009,0.687
+85, China,2010,0.699
+85, China,2011,0.707
+85, China,2012,0.716
+85, China,2013,0.724
+85, China,2014,0.731
+85, China,2015,0.739
+85, China,2016,0.746
+85, China,2017,0.750
+85, China,2018,0.755
+85, China,2019,0.761
+85, China,2020,0.761
+170, Sudan,1990,0.331
+170, Sudan,1991,0.336
+170, Sudan,1992,0.344
+170, Sudan,1993,0.352
+170, Sudan,1994,0.358
+170, Sudan,1995,0.366
+170, Sudan,1996,0.374
+170, Sudan,1997,0.384
+170, Sudan,1998,0.390
+170, Sudan,1999,0.396
+170, Sudan,2000,0.403
+170, Sudan,2001,0.409
+170, Sudan,2002,0.415
+170, Sudan,2003,0.422
+170, Sudan,2004,0.430
+170, Sudan,2005,0.437
+170, Sudan,2006,0.443
+170, Sudan,2007,0.450
+170, Sudan,2008,0.461
+170, Sudan,2009,0.468
+170, Sudan,2010,0.469
+170, Sudan,2011,0.474
+170, Sudan,2012,0.486
+170, Sudan,2013,0.494
+170, Sudan,2014,0.499
+170, Sudan,2015,0.504
+170, Sudan,2016,0.507
+170, Sudan,2017,0.509
+170, Sudan,2018,0.506
+170, Sudan,2019,0.510
+170, Sudan,2020,0.510
+133, Bangladesh,1990,0.394
+133, Bangladesh,1991,0.401
+133, Bangladesh,1992,0.410
+133, Bangladesh,1993,0.418
+133, Bangladesh,1994,0.426
+133, Bangladesh,1995,0.434
+133, Bangladesh,1996,0.443
+133, Bangladesh,1997,0.452
+133, Bangladesh,1998,0.461
+133, Bangladesh,1999,0.469
+133, Bangladesh,2000,0.478
+133, Bangladesh,2001,0.486
+133, Bangladesh,2002,0.492
+133, Bangladesh,2003,0.499
+133, Bangladesh,2004,0.506
+133, Bangladesh,2005,0.514
+133, Bangladesh,2006,0.521
+133, Bangladesh,2007,0.528
+133, Bangladesh,2008,0.531
+133, Bangladesh,2009,0.543
+133, Bangladesh,2010,0.557
+133, Bangladesh,2011,0.566
+133, Bangladesh,2012,0.575
+133, Bangladesh,2013,0.579
+133, Bangladesh,2014,0.579
+133, Bangladesh,2015,0.595
+133, Bangladesh,2016,0.606
+133, Bangladesh,2017,0.616
+133, Bangladesh,2018,0.625
+133, Bangladesh,2019,0.632
+133, Bangladesh,2020,0.632
+84, Brazil,1990,0.613
+84, Brazil,1991,0.621
+84, Brazil,1992,0.627
+84, Brazil,1993,0.635
+84, Brazil,1994,0.642
+84, Brazil,1995,0.651
+84, Brazil,1996,0.658
+84, Brazil,1997,0.665
+84, Brazil,1998,0.670
+84, Brazil,1999,0.676
+84, Brazil,2000,0.685
+84, Brazil,2001,0.691
+84, Brazil,2002,0.699
+84, Brazil,2003,0.695
+84, Brazil,2004,0.698
+84, Brazil,2005,0.700
+84, Brazil,2006,0.702
+84, Brazil,2007,0.706
+84, Brazil,2008,0.717
+84, Brazil,2009,0.719
+84, Brazil,2010,0.727
+84, Brazil,2011,0.731
+84, Brazil,2012,0.735
+84, Brazil,2013,0.753
+84, Brazil,2014,0.756
+84, Brazil,2015,0.756
+84, Brazil,2016,0.758
+84, Brazil,2017,0.761
+84, Brazil,2018,0.762
+84, Brazil,2019,0.765
+84, Brazil,2020,0.765
+189, Niger,1990,0.220
+189, Niger,1991,0.223
+189, Niger,1992,0.226
+189, Niger,1993,0.231
+189, Niger,1994,0.235
+189, Niger,1995,0.240
+189, Niger,1996,0.244
+189, Niger,1997,0.248
+189, Niger,1998,0.255
+189, Niger,1999,0.259
+189, Niger,2000,0.262
+189, Niger,2001,0.268
+189, Niger,2002,0.273
+189, Niger,2003,0.276
+189, Niger,2004,0.285
+189, Niger,2005,0.294
+189, Niger,2006,0.300
+189, Niger,2007,0.306
+189, Niger,2008,0.314
+189, Niger,2009,0.321
+189, Niger,2010,0.331
+189, Niger,2011,0.338
+189, Niger,2012,0.350
+189, Niger,2013,0.357
+189, Niger,2014,0.365
+189, Niger,2015,0.372
+189, Niger,2016,0.378
+189, Niger,2017,0.386
+189, Niger,2018,0.391
+189, Niger,2019,0.394
+189, Niger,2020,0.394

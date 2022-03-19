@@ -1,5 +1,0 @@
-disaster_key,country,start_year,start_month,start_day,end_year,end_month,end_day,disaster_group,disaster_subgroup,disaster_type,disaster_subtype,total_affected,total_disaster_deaths
-2005-0591-CAN,Canada,2005,9,27,2005,9,29,Natural,Hydrological,Flood,Riverine flood,600, 20
-2020-0537-BRA,Brazil,2020,12,4,2020,12,4,Technological,Technological,Transport accident,Road,26,14
-2020-0079-BRA,Brazil,2020,2,29,2020,2,29,Technological,Technological,Transport accident,Water,46,48
-2020-9582-BRA,Brazil,2020,1,1,2020,12,2,Natural,Climatological,Drought,Drought,100,13

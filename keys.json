@@ -12,6 +12,11 @@
   "Latest population census":"last_census_year",
   "area":"land_area",
   "num_language":"number_languages",
+  "Lending category":"lending_category",
+  "Special Notes":"special_notes",
+  "Latest agricultural census":"latest_agricultural_census",
+  "Latest industrial data":"latest_industrial_data",
+  "Latest trade data":"latest_trade_data",
 
   "Literacy rate, adult total (% of people ages 15 and above)":"adult_literacy_rate",
   "Literacy rate, adult male (% of males ages 15 and above)":"male_literacy_rate",
@@ -77,7 +82,7 @@
   "Population, female (% of total population)":"female_population",
   "Population, male (% of total population)":"male_population",
   "Population, total":"total_population",
-
+  "Suicide mortality rate (per 100,000 population)":"suicide_mortalty_rate",
 
 
 

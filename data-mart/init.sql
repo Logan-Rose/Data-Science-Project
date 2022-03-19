@@ -7,6 +7,10 @@ CREATE TABLE Country(
   currency TEXT,
   income_group TEXT,
   last_census_year INT,
+  lending_category TEXT,
+  special_notes TEXT,
+  latest_industrial_data DECIMAL,
+  latest_trade_data DECIMAL,
   continent TEXT,
   capital TEXT,
   area INT,
@@ -52,9 +56,12 @@ CREATE TABLE Health(
   polio_immunization_infants DECIMAL,
   measles_immunization_toddlers DECIMAL,
   tuberculosis_per_hundred_thousand DECIMAL,
+  mortality_rate_air_quality DECIMAL,
+  mortality_rate_unsafe_water DECIMAL,
   number_of_nurses_midwives_per_thousand DECIMAL,
   anemia_children_percent DECIMAL,
   percent_children_overweight DECIMAL,
+  suicide_mortalty_rate DECIMAL,
   UHC_service_coverage_index DECIMAL
 );
 CREATE TABLE Quality_of_Life(
@@ -63,8 +70,6 @@ CREATE TABLE Quality_of_Life(
   labor_force_participation DECIMAL,
   labor_force_total DECIMAL,
   maternal_leave_benifits DECIMAL,
-  mortality_rate_air_quality DECIMAL,
-  mortality_rate_unsafe_water DECIMAL,
   practicing_open_defecation DECIMAL,
   access_basic_drinking_water DECIMAL,
   access_to_basic_sanitation DECIMAL,

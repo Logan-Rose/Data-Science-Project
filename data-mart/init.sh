@@ -2,9 +2,9 @@
 
 db="some-postgres"
 
-# Move the Seed Files from the seed_data directory to the /seeds directory in the docker container
+# Move the Seed Files from the seeds directory to the /seeds directory in the docker container
 docker exec -t -i $db /bin/bash -c "mkdir seeds"
-cd seed_data
+cd seedss
 load_file () {
   arr=(${1//_/ })
   echo ${arr[0]}

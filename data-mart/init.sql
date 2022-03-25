@@ -104,6 +104,7 @@ CREATE TABLE Month(
 );
 CREATE TABLE FACT(
   key INT PRIMARY KEY NOT NULL,
+  population_key INT,
   country_key INT,
   date_key INT,
   education_key INT,

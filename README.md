@@ -12,10 +12,9 @@
 - The original source data, can be found in the ```/data``` directory.
 - Metadata about external data sources can be found in the ```/data/sources.csv```  file..
 
-### Perpared Seed Data
+### Prepared Seed Data
 
 - The seed data, (generated using ```seed_generate.ipynb```), can be found in the ```/seed_data``` folder
- 
 ## Setting up the Project
 
   1. Open the ```seed_generate.ipynb``` Jupyter Notebook. Run all the cells (should take around 1 minute), this file is responsible for all data staging, and is separated into different code blocks for each step of the staging process.

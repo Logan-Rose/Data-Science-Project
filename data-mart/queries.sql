@@ -47,13 +47,16 @@ GROUP BY
   -- For instance, contrast (i) the prevalence of health conditions, (ii) the literacy
   -- rates, or (iii) the life expectancies in Canada versus Mexico.
 SELECT
-  *
+  country.short_name,
+  education.*
 from
   fact
   INNER JOIN education ON fact.education_key = education.key
   INNER JOIN country ON fact.country_key = country.key
+WHERE
+  country.alpha_code = 'CAN'
+  OR country.alpha_code = 'MEX'
 GROUP BY
-  fact.key,
   country.key,
   education.key;
 -- d. Combining OLAP operations. In these queries, we combine the above‐
@@ -66,25 +69,62 @@ GROUP BY
   -- each one of these categories.
   -- a. Iceberg queries. For instance,
   -- i) find the five years with the highest population growths,
-select
-  sum(population_growth),
-  --I dont know if this is actually right
-  month.year
+SELECT
+  sum(population_growth) as total_growth,
+  sub.year
 from
-  fact
-  inner join population on Fact.population_key = population.key
-  inner join month on fact.date_key = month.key
+  (
+    select
+      round(AVG(population_growth * total_population / 100)) as population_growth,
+      month.year,
+      country.alpha_code
+    from
+      fact
+      inner join population on Fact.population_key = population.key
+      inner join month on fact.date_key = month.key
+      inner join country on fact.country_key = country.key
+    GROUP BY
+      month.year,
+      country.key
+  ) as sub
 group by
-  month.year
+  year
 order by
-  sum(population_growth) desc
-limit
-  5 -- ii) find the five countries with the highest decreases
-  -- in term of specific health conditions (e.g., tuberculosis) in
-  -- subpopulations {children, male, female, total} when considering a
-  -- particular decade.
-  -- b. Windowing queries. For instance, display the ranking of the countries
+  total_growth Desc
+Limit
+  5;
+-- b. Windowing queries. For instance, display the ranking of the countries
   -- in terms of the literacy rates, as reported per gender, over the last five
   -- years.
-  -- c. Using the Window clause. For instance, compare the number of
+select
+  country.short_name,
+  month.year,
+  month.name,
+  round(avg(education.male_literacy_rate)) as male_literacy_rate,
+  round(avg(education.female_literacy_rate)) as female_literacy_rate
+from
+  fact
+  inner join education on fact.education_key = education.key
+  inner join month on fact.date_key = month.key
+  inner join country on fact.country_key = country.key
+Group by
+  country.key,
+  month.year,
+  month.name;
+-- c. Using the Window clause. For instance, compare the number of
   -- hospital beds in Canada in 2019 to that of the previous and next years.
+Select
+  health.hospital_beds_per_thousand
+From
+  fact
+  inner join health on fact.health_key = health.key;
+--   Drill Down:
+  -- •    Drill down from continent to region or country
+  -- •    HDI of country/region with population greater than 10 million?
+  -- Roll – up:
+  -- •    Roll up from month to year
+  -- •    Infant mortality rate in “x” year when a disaster occurred
+  -- Slice:
+  -- •    The prevalence of under nourishment during x year for all countries
+  -- Dice:
+  -- •    The HDI of Canada and United States in 2018

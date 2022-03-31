@@ -100,7 +100,9 @@ CREATE TABLE Month(
   year INT,
   month_number INT,
   quarter INT,
-  decade INT
+  decade INT,
+  month_start Date GENERATED ALWAYS AS (make_date(year, month_number + 1, 1)) STORED,
+  year_start Date GENERATED ALWAYS AS (make_date(year, 1, 1)) STORED
 );
 CREATE TABLE FACT(
   key INT PRIMARY KEY NOT NULL,

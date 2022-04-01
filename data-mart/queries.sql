@@ -2,35 +2,42 @@
 -- data mart, such as (name, region, continent) and (month, quarter, year,
 -- decade).
 -- Rolled up to continent
-SELECT
-  ROUND(AVG(fact.avg_births)) as births,
-  ROUND(AVG(fact.avg_births)) as deaths,
-  ROUND(AVG(fact.hdi), 2) as hdi,
-  country.continent
-from
-  fact
-  INNER JOIN country ON fact.country_key = country.key
-GROUP BY
-  country.continent;
--- get based on quarter
-SELECT
-  country.short_name,
-  month.quarter,
-  month.year,
-  ROUND(AVG(fact.avg_births)) as births,
-  ROUND(AVG(fact.avg_births)) as deaths,
-  ROUND(AVG(fact.hdi), 2) as hd
-from
-  fact
-  INNER JOIN month ON fact.date_key = month.key
-  INNER JOIN country ON fact.country_key = country.key
-GROUP BY
-  month.year,
-  month.quarter,
-  country.short_name
-ORDER BY
-  month.year,
-  month.quarter;
+select
+  count(*),
+  E.event_type,
+  C.continent
+FROM
+  fact as F,
+  country as C,
+  event as E
+WHERE
+  F.country_key = C.key
+  and F.event_key = E.key
+group by
+  E.event_type,
+  C.continent,
+  rollup (C.continent);
+-- get the Number of each type of event in each country per year
+select
+  count(*),
+  D.year,
+  E.event_type,
+  C.short_name
+FROM
+  fact as F,
+  month as D,
+  country as C,
+  event as E
+WHERE
+  F.date_key = D.key
+  and F.country_key = C.key
+  and F.event_key = E.key
+group by
+  E.event_type,
+  C.short_name,
+  rollup (D.year)
+Order by
+  D.year;
 -- b. Slice, where only one dimension is selected. – 1 query
   -- For instance, contrast (i) the prevalence of health conditions, (ii) the literacy
   -- rates, or (iii) the life expectancies in your nine (9) countries.
@@ -128,3 +135,120 @@ From
   -- •    The prevalence of under nourishment during x year for all countries
   -- Dice:
   -- •    The HDI of Canada and United States in 2018
+  --SQL SLice Example
+SELECT
+  count(*),
+  E.event_type,
+  C.short_name,
+  M.quarter
+FROM
+  fact as F,
+  country as C,
+  event as E,
+  month as M
+WHERE
+  F.country_key = C.key
+  and F.event_key = E.key
+  and F.date_key = M.key
+  and C.alpha_code in ('CAN', 'USA', 'BRA', 'MEX')
+  and M.quarter = 2
+  and E.event_type in ('Flood', 'Storm', 'Wildfire')
+GROUP BY
+  (C.short_name, E.key, m.key);
+SELECT
+  count(*),
+  E.adult_literacy_rate,
+  E.male_literacy_rate,
+  E.female_literacy_rate,
+  C.short_name,
+  M.quarter
+FROM
+  fact as F,
+  country as C,
+  education as E,
+  month as M
+WHERE
+  F.country_key = C.key
+  and F.education_key = E.key
+  and F.date_key = M.key
+  and C.income_group in ('Lower middle income', 'Low income')
+GROUP BY
+  (C.short_name, E.key, m.key);
+--Cube
+select
+  count(*),
+  M.name,
+  M.year E.event_type,
+from
+  fact table as F,
+  Month as M,
+  Event as E,
+WHere
+  F.date_key = month.key
+  and F.event_key = E.key
+Group By
+  (M.name, M.year, E.event_type)
+Order by
+  M.name,
+  M.year;
+--Subquery to get annual HDI, and health expenditure of each country
+Select
+  DISTINCT C.short_name,
+  M.year,
+  H.health_expenditure,
+  F.hdi
+from
+  fact as F,
+  country as C,
+  health as H,
+  Month as M
+where
+  F.country_key = C.key
+  and F.health_key = H.key
+  and F.date_key = M.key
+ORDER BY
+  M.year;
+--
+Select
+  Distinct C.short_name,
+  M.month_start,
+  E.adult_literacy_rate,
+  Avg(E.adult_literacy_rate) over (partition by C.short_name)
+from
+  Fact as F,
+  Month as M,
+  Education as E,
+  Country C
+where
+  F.country_key = C.key
+  and F.education_key = E.key
+  and F.date_key = M.key
+Order By
+  C.short_name,
+  M.month_start;
+-- Drill Down: Total damages from all meteorological disasters in USA
+Select
+  M.name,
+  M.year,
+  E.event_type,
+  E.total_affected,
+  C.short_name
+from
+  fact F,
+  event E,
+  Month M,
+  Country C
+where
+  F.event_key = E.key
+  and F.date_key = M.key
+  and F.country_key = C.key
+  and e.event_type = 'Storm'
+  and C.short_name = 'Mexico'
+group by
+  (
+    E.key,
+    M.name,
+    M.year,
+    C.short_name,
+    E.event_type
+  );

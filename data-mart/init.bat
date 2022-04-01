@@ -1,6 +1,6 @@
 @REM !/usr/bin/env bash
 
-set db=some-postgres
+set db=somepostgres
 
 @REM Move the Seed Files from the seed_data directory to the /seeds directory in the docker container
 

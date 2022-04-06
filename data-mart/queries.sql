@@ -252,3 +252,17 @@ group by
     C.short_name,
     E.event_type
   );
+Select
+  distinct on (p.population_key) p."year",
+  p.country,
+  HDI(f.HDI)
+from
+  population as p,
+  fact as f,
+  quality_of_
+where
+  p.population_key = f.population_key
+  and q.qol_key = f.qol_key
+  and p."Suicide mortality rate (per 100,000 population)" < 2.1
+  and q."Unemployment, total (% of total labor force)" < 8
+  and f."Quality of Life" > 0

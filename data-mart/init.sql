@@ -1,5 +1,5 @@
 CREATE TABLE Country(
-  key INT PRIMARY KEY NOT NULL,
+  Country_key INT PRIMARY KEY NOT NULL,
   long_name TEXT,
   short_name TEXT,
   alpha_code TEXT,
@@ -17,8 +17,8 @@ CREATE TABLE Country(
   num_languages INT
 );
 CREATE TABLE Event(
-  key INT PRIMARY KEY NOT NULL,
-  seed_id TEXT,
+  Event_key INT PRIMARY KEY NOT NULL,
+  --seed_id TEXT,
   country TEXT,
   start_year DECIMAL,
   start_month DECIMAL,
@@ -31,7 +31,7 @@ CREATE TABLE Event(
   total_deaths DECIMAL
 );
 CREATE TABLE Education(
-  key INT PRIMARY KEY NOT NULL,
+  Education_key INT PRIMARY KEY NOT NULL,
   female_literacy_rate DECIMAL,
   male_literacy_rate DECIMAL,
   adult_literacy_rate DECIMAL,
@@ -46,7 +46,7 @@ CREATE TABLE Education(
   tertiary_school_enrollment DECIMAL
 );
 CREATE TABLE Health(
-  key INT PRIMARY KEY NOT NULL,
+  Health_key INT PRIMARY KEY NOT NULL,
   communicable_disease_deaths_percent DECIMAL,
   non_communicable_disease_deaths_percent DECIMAL,
   health_expenditure DECIMAL,
@@ -65,7 +65,7 @@ CREATE TABLE Health(
   UHC_service_coverage_index DECIMAL
 );
 CREATE TABLE Quality_of_Life(
-  key INT PRIMARY KEY NOT NULL,
+  Quality_of_Life_key INT PRIMARY KEY NOT NULL,
   percent_births_attended_skilled_staff DECIMAL,
   labor_force_participation DECIMAL,
   labor_force_total DECIMAL,
@@ -80,7 +80,7 @@ CREATE TABLE Quality_of_Life(
   male_Unemployment_Rate DECIMAL
 );
 CREATE TABLE Population(
-  key INT PRIMARY KEY NOT NULL,
+  Population_key INT PRIMARY KEY NOT NULL,
   female_life_expectancy DECIMAL,
   male_life_expectancy DECIMAL,
   total_life_expectancy DECIMAL,
@@ -95,7 +95,7 @@ CREATE TABLE Population(
   urban_population_growth DECIMAL
 );
 CREATE TABLE Month(
-  key INT PRIMARY KEY NOT NULL,
+  Month_key INT PRIMARY KEY NOT NULL,
   name TEXT,
   year INT,
   month_number INT,
@@ -104,11 +104,11 @@ CREATE TABLE Month(
   month_start Date GENERATED ALWAYS AS (make_date(year, month_number + 1, 1)) STORED,
   year_start Date GENERATED ALWAYS AS (make_date(year, 1, 1)) STORED
 );
-CREATE TABLE FACT(
-  key INT PRIMARY KEY NOT NULL,
+CREATE TABLE Fact(
+  Fact_key INT PRIMARY KEY NOT NULL,
   population_key INT,
   country_key INT,
-  date_key INT,
+  month_key INT,
   education_key INT,
   health_key INT,
   quality_of_life_key INT,

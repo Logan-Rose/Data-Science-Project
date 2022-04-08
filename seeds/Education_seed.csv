@@ -1,4 +1,4 @@
-key,female_literacy_rate,male_literacy_rate,adult_literacy_rate,primary_completion_rate_total,public_education_spending,primary_school_enrollment,primary_school_enrollment_female,primary_school_enrollment_male,secondary_school_enrollment,secondary_school_enrollment_female,secondary_school_enrollment_male,tertiary_school_enrollment
+Education_key,female_literacy_rate,male_literacy_rate,adult_literacy_rate,primary_completion_rate_total,public_education_spending,primary_school_enrollment,primary_school_enrollment_female,primary_school_enrollment_male,secondary_school_enrollment,secondary_school_enrollment_female,secondary_school_enrollment_male,tertiary_school_enrollment
 0,99.0,99.0,99.0,98.0,4.765880108,97.36457062,96.93871307,97.77118683,101.3911896,100.2343826,102.4870605,63.111279298
 1,99.0,99.0,99.0,98.0,4.8710720062,98.88063049,98.50982666,99.23444366,101.7282486,100.6695023,102.7323608,63.111279298
 2,99.0,99.0,99.0,98.0,4.766409874,98.96647644,98.72110748,99.20018768,101.9034882,100.7483673,103.0018997,63.60005951

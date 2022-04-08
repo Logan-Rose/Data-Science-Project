@@ -1,4 +1,4 @@
-key,population_key,country_key,date_key,education_key,health_key,quality_of_life_key,event_key,avg_births,avg_deaths,HDI
+Fact_key,population_key,country_key,month_key,education_key,health_key,quality_of_life_key,event_key,avg_births,avg_deaths,HDI
 0,16,1,1,16,16,16,752,4135332.000000001,2452624.0,0.9
 1,32,2,1,32,32,32,588,2309140.0,509041.0,0.737
 2,48,3,1,48,48,48,409,27656029.0,9268690.0,0.536

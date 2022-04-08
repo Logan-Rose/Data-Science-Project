@@ -23,7 +23,7 @@ docker cp ../data-mart/init.sql $db:./seeds/
 docker exec -ti $db psql -U postgres -c "\i ./seeds/init.sql"
 # Populate Tables with seed data
 docker exec -ti $db psql -U postgres -c "\copy Country FROM ./seeds/countries_seed.csv delimiter ',' CSV HEADER"
-docker exec -ti $db psql -U postgres -c "\copy Month FROM ./seeds/date_seed.csv delimiter ',' CSV HEADER"
+docker exec -ti $db psql -U postgres -c "\copy Month FROM ./seeds/month_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Education FROM ./seeds/Education_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Health FROM ./seeds/Health_seed.csv delimiter ',' CSV HEADER"
 docker exec -ti $db psql -U postgres -c "\copy Quality_of_Life FROM ./seeds/Quality_of_life_seed.csv delimiter ',' CSV HEADER"

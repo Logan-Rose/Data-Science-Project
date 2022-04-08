@@ -1,3 +1,5 @@
-docker exec -t -i somepostgres /bin/bash -c "cd seeds; rm *; cd ..; rmdir seeds"
+set db=somepostgres
 
-docker exec -ti somepostgres psql -U postgres -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"
+docker exec -t -i %db% /bin/bash -c "cd seeds; rm *; cd ..; rmdir seeds"
+
+docker exec -ti %db% psql -U postgres -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"

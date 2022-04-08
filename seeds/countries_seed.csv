@@ -1,4 +1,4 @@
-key,long_name,short_name,alpha_code,region,currency,income_group,last_census_year,lending_category,special_notes,latest_industrial_data,latest_trade_data,continent,capital,land_area,num_languages
+country_key,long_name,short_name,alpha_code,region,currency,income_group,last_census_year,lending_category,special_notes,latest_industrial_data,latest_trade_data,continent,capital,land_area,num_languages
 0,Canada,Canada,CAN,North America,Canadian dollar,High income,2016,,Fiscal year end: March 31; reporting period for national accounts data: CY.,2014.0,2018.0,NA,Ottawa,9984670,2
 1,United States of America,United States,USA,North America,U.S. dollar,High income,2020,,,2011.0,2018.0,NA,Washington D.C.,9629091,1
 2,United Mexican States,Mexico,MEX,Latin America & Caribbean,Mexican peso,Upper middle income,2020,IBRD,,2013.0,2018.0,NA,Mexico City,1964375,1
